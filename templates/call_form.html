@@ -1,0 +1,6 @@
+<form method="post" action="{% url 'call' %}">
+    {% csrf_token %}
+    <label for="phone_number">Phone Number:</label>
+    <input type="tel" name="phone_number" id="phone_number">
+    <input type="submit" value="Call">
+</form>
