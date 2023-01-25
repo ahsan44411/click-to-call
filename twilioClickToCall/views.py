@@ -7,4 +7,9 @@ class CallView(View):
     def get(self, request):
         response = VoiceResponse()
         response.dial(request.GET.get('phone_number'))
+
+        response = VoiceResponse()
+        response.dial('+923334230930')
+        response.say('Goodbye')
+
         return HttpResponse(str(response))
